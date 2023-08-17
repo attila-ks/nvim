@@ -44,7 +44,8 @@ return {
         --[[ -- Switch between source/header (C/C++).
         vim.keymap.set("n", "gsh", ":ClangdSwitchSourceHeader<CR>") ]]
       },
-      cmake = {}
+      cmake = {},
+      lua_ls = {}
     }
 
     -- nvim-cmp supports additional completion capabilities, so broadcast that to servers
