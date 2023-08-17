@@ -49,3 +49,6 @@ opt.tabstop = 2
 -- Number of spaces to use for each step of (auto)indent. Used for `>>`, `<<`, etc.
 opt.shiftwidth = 2
 opt.autoindent = true
+
+-- Blinking cursor.
+opt.guicursor = "a:blinkon100"
