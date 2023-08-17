@@ -75,6 +75,24 @@
 - Move line up: `J` (visual mode).
 - Move line down: `K` (visual mode).
 
+- Switch from insert mode to normal mode for one command: `C-o` (insert mode).
+
+- Increment number: `C-a`
+- Decrement number: `C-x`
+
+- Toggle case: `~`
+- Change to lowercase: `u`
+- Change to uppercase: `U`
+
+- Run shell command: `:!<shell-command>`
+
+- Mark a specific position (locally): `m<a-z>`
+- Jump to the beginning of a marked line (locally): `'<a-z>`
+- Jump to the exact position of a marked line (locally): "`<a-z>"
+- Mark a specific position (globally): `m<A-Z>`
+- Jump to the beginning of a marked line (globally): `'<A-Z>`
+- Jump to the exact position of a marked line (globally): "`<A-Z>"
+
 # Debugging
 - Start / continue debugging: `<F5>`
 - Step over: `<F1>`
@@ -103,3 +121,4 @@
 - Preview hunk inline: `<leader>hp`
 - Stage buffer: `<leader>hS`
 - Reset buffer: `<leader>hR`
+
