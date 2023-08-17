@@ -63,6 +63,11 @@
 - Go to references: `gr`
 - Format buffer: `<leader>f`
 
+## nvim-surround
+- Add surrounding delimiter pair: `ys<motion><char>`
+- Delete surrounding delimiter pair: `ds<char>`
+- Change surrounding delimiter pair: `cs<target><replacement>`
+
 ## Etc
 - Search: `/<search-term>`
 - Search and replace all: `%s/<search-term>/<replate-term>/g`
