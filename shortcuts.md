@@ -13,7 +13,7 @@
 - Switch to the previous buffer: `<S-h>`
 - Close current buffer: `:bd`
 
-# Telescope
+# Telescope (plugin)
 - Find files: `<leader>ff`
 - Live grep: `<leader>fg`
 - Search recent files: `<leader>fr`
@@ -26,22 +26,17 @@
 - Scroll down in preview window: `<C-d>`
 - Close telescope: `<C-c>`
 
-# Editor
-## C/C++
-- Switch between source/header: `gsh`
-
-## Comment
+# Comment (plugin)
 - Toggle line using linewise comment: `gcc`
 - Toggle block using blockwise comment: `gbc`
 - Toggle region using linewise comment: `gc` (visual mode).
 - Toggle region using blockwise comment: `gb` (visual mode).
 
-## Leap
+# Leap (plugin)
 - Initiate forward search: `s`
 - Initiate backward search: `S`
 
-## Cursor
-### Multiple cursors
+# Multiple cursors (plugin)
 - Create cursors vertically: `<C-Down>` / `<C-Up>`
 - Select one character at a time: `<S-Arrows>`
 - Go to the next / previous occurrence: `n` / `N`
@@ -49,13 +44,7 @@
 - Skip current cursor and go to the next occurrence: `q`
 - Remove current cursor: `Q`
 
-### Etc
-- Jump to the previous cursor position: `<C-o>`
-- Jump to the next cursor position, if available: `<C-i>`
-- 1/2 page jumping (downwards): `<C-d>`
-- 1/2 page jumping (upwards): `<C-u>`
-
-## LSP
+# LSP (plugin)
 - Go to definition: `gd`
 - Go to implementation: `gi`
 - Hover documentation: `K`
@@ -63,12 +52,49 @@
 - Go to references: `gr`
 - Format buffer: `<leader>f`
 
-## nvim-surround
+## clangd (LSP for C/C++)
+- Switch between source/header: `gsh`
+
+# Debugging (plugin)
+- Start / continue debugging: `<F5>`
+- Step over: `<F1>`
+- Step into: `<F2>`
+- Step out: `<F3>`
+- Restart: `<F4>`
+- Terminate: `<F6>`
+- Toggle breakpoint: `<leader>b`
+- Toggle conditional breakpoint: `<leader>B`
+- Remove all breakpoints: `<leader>cb`
+- Open a floating variable scopes window during debugging: `<leader>os`
+- Close the floating variable scopes window: `:q`
+
+# Git (plugin)
+- Open diffview: `<leader>do`
+- Close diffview: `<leader>do`
+- Toggle the file panel: `<leader>df`
+
+[comment]: # (TODO: Delete the following if I don't use it!)
+- Stage / unstage the selected entry: `-`
+- Next hunk: `<leader>j`
+- Previous hunk: `<leader>k`
+- Stage hunk: `<leader>hs`
+- Reset hunk: `<leader>hr`
+- Unstage hunk: `<leader>hu`
+- Preview hunk inline: `<leader>hp`
+- Stage buffer: `<leader>hS`
+- Reset buffer: `<leader>hR`
+
+# nvim-surround (plugin)
 - Add surrounding delimiter pair: `ys<motion><char>`
 - Delete surrounding delimiter pair: `ds<char>`
 - Change surrounding delimiter pair: `cs<target><replacement>`
 
-## Etc
+# Etc
+- Jump to the previous cursor position: `<C-o>`
+- Jump to the next cursor position, if available: `<C-i>`
+- 1/2 page jumping (downwards): `<C-d>`
+- 1/2 page jumping (upwards): `<C-u>`
+
 - Search: `/<search-term>`
 - Search and replace all: `%s/<search-term>/<replate-term>/g`
 
@@ -92,33 +118,4 @@
 - Mark a specific position (globally): `m<A-Z>`
 - Jump to the beginning of a marked line (globally): `'<A-Z>`
 - Jump to the exact position of a marked line (globally): "`<A-Z>"
-
-# Debugging
-- Start / continue debugging: `<F5>`
-- Step over: `<F1>`
-- Step into: `<F2>`
-- Step out: `<F3>`
-- Restart: `<F4>`
-- Terminate: `<F6>`
-- Toggle breakpoint: `<leader>b`
-- Toggle conditional breakpoint: `<leader>B`
-- Remove all breakpoints: `<leader>cb`
-- Open a floating variable scopes window during debugging: `<leader>os`
-- Close the floating variable scopes window: `:q`
-
-# Git
-- Open diffview: `<leader>do`
-- Close diffview: `<leader>do`
-- Toggle the file panel: `<leader>df`
-
-[comment]: # (TODO: Delete the following if I don't use it!)
-- Stage / unstage the selected entry: `-`
-- Next hunk: `<leader>j`
-- Previous hunk: `<leader>k`
-- Stage hunk: `<leader>hs`
-- Reset hunk: `<leader>hr`
-- Unstage hunk: `<leader>hu`
-- Preview hunk inline: `<leader>hp`
-- Stage buffer: `<leader>hS`
-- Reset buffer: `<leader>hR`
 
