@@ -55,6 +55,11 @@
 ## clangd (LSP for C/C++)
 - Switch between source/header: `gsh`
 
+## Trouble (plugin)
+- Toggle document diagnostics: `<leader>xd`
+- Toggle workspace diagnostics: `<leader>xw`
+- Close the list: `q`
+
 # Debugging (plugin)
 - Start / continue debugging: `<F5>`
 - Step over: `<F1>`
