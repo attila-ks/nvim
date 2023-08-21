@@ -124,3 +124,4 @@
 - Jump to the beginning of a marked line (globally): `'<A-Z>`
 - Jump to the exact position of a marked line (globally): "`<A-Z>"
 
+- Search and replace (globally): `<leader>fg` -> `<target>` -> `C-q` -> `:cdo s/<target>/<replacement>/g`
