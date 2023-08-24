@@ -76,7 +76,12 @@
 # Git (plugin)
 - Open diffview: `<leader>do`
 - Close diffview: `<leader>do`
-- Toggle the file panel: `<leader>df`
+- Toggle the file panel: `<leader>dt`
+- Bring focus to the file panel: `<leader>df` 
+- Jump to the previous merge conflict marker: `]x`
+- Jump to the next merge conflict marker: `[x`
+- Choose the OURS version of the conflict: `<leader>co`
+- Choose the THEIRS version of the conflict: `<leader>ct`
 
 [comment]: # (TODO: Delete the following if I don't use it!)
 - Stage / unstage the selected entry: `-`

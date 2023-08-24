@@ -13,7 +13,8 @@ return {
     require("diffview").setup {
       keymap.set("n", "<leader>do", "<cmd>DiffviewOpen<CR>"),
       keymap.set("n", "<leader>dc", "<cmd>DiffviewClose<CR>"),
-      keymap.set("n", "<leader>df", "<cmd>DiffviewToggleFiles<CR>")
+      keymap.set("n", "<leader>dt", "<cmd>DiffviewToggleFiles<CR>"),
+      keymap.set("n", "<leader>df", "<cmd>DiffviewFocusFiles<CR>")
     }
   end
 }
