@@ -10,10 +10,6 @@ keymap.set("n", "<S-l>", ":bn<CR>")
 -- Switch to the previous buffer.
 keymap.set("n", "<S-h>", ":bp<CR>")
 
--- TODO: Make it available only when the current buffer contains C/C++ code.
--- Switch between source/header (C/C++).
-keymap.set("n", "gsh", ":ClangdSwitchSourceHeader<CR>", { silent = true, desc = "Switch src/header (C/C++)" })
-
 -- Move line up.
 keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 -- Move line down.

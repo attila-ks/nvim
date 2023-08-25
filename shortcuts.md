@@ -53,7 +53,7 @@
 - Format buffer: `<leader>f`
 
 ## clangd (LSP for C/C++)
-- Switch between source/header: `gsh`
+- Switch between source/header: `<A-o>`
 
 ## Trouble (plugin)
 - Toggle document diagnostics: `<leader>xd`
