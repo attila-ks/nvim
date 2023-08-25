@@ -27,13 +27,13 @@ return {
 
       -- Mappings.
       -- See `:help vim.lsp.*` for documentation on any of the below functions
-      nmap("gd", vim.lsp.buf.definition, "Goto Definition")
+      nmap("gd", vim.lsp.buf.definition, "Goto definition")
       -- TODO: Do I need the next one?
-      nmap("gi", vim.lsp.buf.implementation, "Goto Implementation")
-      nmap("K", vim.lsp.buf.hover, "Hover Documentation")
+      nmap("gi", vim.lsp.buf.implementation, "Goto implementation")
+      nmap("K", vim.lsp.buf.hover, "Hover documentation")
       nmap("<leader>rn", vim.lsp.buf.rename, "Rename")
-      nmap("gr", require("telescope.builtin").lsp_references, "Goto References")
-      nmap("<leader>f", function() vim.lsp.buf.format { async = true } end, "Format Buffer")
+      nmap("gr", require("telescope.builtin").lsp_references, "Goto references")
+      nmap("<leader>f", function() vim.lsp.buf.format { async = true } end, "Format buffer")
     end
 
     -- Enable the following language servers. They will automatically be installed.

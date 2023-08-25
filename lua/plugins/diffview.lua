@@ -12,10 +12,10 @@ return {
       local keymap = vim.keymap
 
       require("diffview").setup {
-        keymap.set("n", "<leader>do", "<cmd>DiffviewOpen<CR>"),
-        keymap.set("n", "<leader>dc", "<cmd>DiffviewClose<CR>"),
-        keymap.set("n", "<leader>dt", "<cmd>DiffviewToggleFiles<CR>"),
-        keymap.set("n", "<leader>df", "<cmd>DiffviewFocusFiles<CR>")
+        keymap.set("n", "<leader>do", "<cmd>DiffviewOpen<CR>", { desc = "Git: Open diffview" }),
+        keymap.set("n", "<leader>dc", "<cmd>DiffviewClose<CR>", { desc = "Git: Close diffview" }),
+        keymap.set("n", "<leader>dt", "<cmd>DiffviewToggleFiles<CR>", { desc = "Git: Toggle file panel" }),
+        keymap.set("n", "<leader>df", "<cmd>DiffviewFocusFiles<CR>", { desc = "Git: Focus on the file panel" })
       }
     end
   end

@@ -40,16 +40,15 @@ return {
     vim.keymap.set("n", "<F3>", dap.step_out)
     vim.keymap.set("n", "<F4>", dap.restart)
     vim.keymap.set("n", "<F6>", dap.terminate)
-    vim.keymap.set("n", "<leader>b", dap.toggle_breakpoint, {desc = "Toggle Breakpoint"})
+    vim.keymap.set("n", "<leader>b", dap.toggle_breakpoint, { desc = "DAP: Toggle breakpoint" })
     vim.keymap.set("n", "<leader>B", function()
       dap.set_breakpoint(vim.fn.input "Breakpoint condition: ")
-    end, {desc = "Toggle Conditional Breakpoint"})
-    vim.keymap.set("n", "<leader>cb", dap.clear_breakpoints)
-    -- Open a floating variable scopes window during debugging.
+    end, { desc = "DAP: Toggle conditional breakpoint" })
+    vim.keymap.set("n", "<leader>cb", dap.clear_breakpoints, { desc = "DAP: Clear breakpoints" })
     -- FIXME: Cannot exit the floating window!
     vim.keymap.set("n", "<leader>os", function()
       widgets.centered_float(widgets.scopes)
-    end)
+    end, { desc = "DAP: Open variables window" })
 
     -- Dap UI setup
     -- For more information, see |:help nvim-dap-ui|
