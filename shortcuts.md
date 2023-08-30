@@ -124,10 +124,10 @@
 
 - Mark a specific position (locally): `m<a-z>`
 - Jump to the beginning of a marked line (locally): `'<a-z>`
-- Jump to the exact position of a marked line (locally): "`<a-z>"
+- Jump to the exact position of a marked line (locally): `` `<a-z>``
 - Mark a specific position (globally): `m<A-Z>`
 - Jump to the beginning of a marked line (globally): `'<A-Z>`
-- Jump to the exact position of a marked line (globally): "`<A-Z>"
+- Jump to the exact position of a marked line (globally): `` `<A-Z>``
 
 - Search and replace (globally): `<leader>fg` -> `<target>` -> `C-q` -> `:cdo s/<target>/<replacement>/g`
 
