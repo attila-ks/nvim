@@ -108,6 +108,7 @@
 
 - Search: `/<search-term>`
 - Search and replace all: `%s/<search-term>/<replate-term>/g`
+- Search and replace (globally): `<leader>fg` -> `<target>` -> `C-q` -> `:cdo s/<target>/<replacement>/g`
 
 - Move line up: `J` (visual mode).
 - Move line down: `K` (visual mode).
@@ -123,6 +124,7 @@
 
 - Run shell command: `:!<shell-command>`
 
+## Mark
 - Mark a specific position (locally): `m<a-z>`
 - Jump to the beginning of a marked line (locally): `'<a-z>`
 - Jump to the exact position of a marked line (locally): `` `<a-z>``
@@ -130,10 +132,9 @@
 - Jump to the beginning of a marked line (globally): `'<A-Z>`
 - Jump to the exact position of a marked line (globally): `` `<A-Z>``
 
-- Search and replace (globally): `<leader>fg` -> `<target>` -> `C-q` -> `:cdo s/<target>/<replacement>/g`
-
 - Replace the character under the cursor: `r<char>`
 
+## Register
 - Paste the last deleted, changed or yanked text from the unnamed register after the cursor: `p`
 - Paste the last deleted, changed or yanked text from the unnamed register before the cursor: `P`
 - Paste the last yanked text from the unnamed register after the cursor: `"0p`
