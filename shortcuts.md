@@ -136,8 +136,8 @@
 
 - Paste the last deleted, changed or yanked text from the unnamed register after the cursor: `p`
 - Paste the last deleted, changed or yanked text from the unnamed register before the cursor: `P`
-- Paste the last yanked text from the unnamed register after the cursor: `0p`
-- Paste the last yanked text from the unnamed register before the cursor: `0P`
+- Paste the last yanked text from the unnamed register after the cursor: `"0p`
+- Paste the last yanked text from the unnamed register before the cursor: `"0P`
 - Paste the text from the named register after the cursor: `"<a-z>p`
 - Paste the text from the named register before the cursor: `"<a-z>P`
 - Paste the last deleted, changed or yanked text from the unnamed register: `<C-r>"` (insert mode).
