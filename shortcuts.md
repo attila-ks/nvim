@@ -1,4 +1,5 @@
 # Window
+
 - Split window vertically: `<C-w>v`
 - Split window horizontally: `<C-w>s`
 - Make split windows equally high and wide: `<C-w>=`
@@ -9,11 +10,13 @@
 - Quit the current window: `<C-w>q`
 
 # Buffer
+
 - Switch to the next buffer: `<S-l>`
 - Switch to the previous buffer: `<S-h>`
 - Close current buffer: `:bd`
 
 # Telescope (plugin)
+
 - Find files: `<leader>ff`
 - Live grep: `<leader>fg`
 - Search recent files: `<leader>fr`
@@ -27,17 +30,20 @@
 - Close telescope: `<C-c>`
 
 # Comment (plugin)
+
 - Toggle line using linewise comment: `gcc`
 - Toggle block using blockwise comment: `gbc`
 - Toggle region using linewise comment: `gc` (visual mode).
 - Toggle region using blockwise comment: `gb` (visual mode).
 
 # Leap (plugin)
+
 - Initiate forward search: `s`
 - Initiate backward search: `S`
 - Initiate search in other windows: `gs`
 
 # Multiple cursors (plugin)
+
 - Create cursors vertically: `<C-Down>` / `<C-Up>`
 - Select one character at a time: `<S-Arrows>`
 - Go to the next / previous occurrence: `n` / `N`
@@ -46,6 +52,7 @@
 - Remove current cursor: `Q`
 
 # LSP (plugin)
+
 - Go to definition: `gd`
 - Go to implementation: `gi`
 - Hover documentation: `K`
@@ -54,14 +61,17 @@
 - Format buffer: `<leader>f`
 
 ## clangd (LSP for C/C++)
+
 - Switch between source/header: `<A-o>`
 
 ## Trouble (plugin)
+
 - Toggle document diagnostics: `<leader>xd`
 - Toggle workspace diagnostics: `<leader>xw`
 - Close the list: `q`
 
 # Debugging (plugin)
+
 - Start / continue debugging: `<F5>`
 - Step over: `<F1>`
 - Step into: `<F2>`
@@ -75,16 +85,15 @@
 - Close the floating variable scopes window: `:q`
 
 # Git (plugin)
+
 - Open diffview: `<leader>do`
 - Close diffview: `<leader>do`
 - Toggle the file panel: `<leader>dt`
-- Bring focus to the file panel: `<leader>df` 
+- Bring focus to the file panel: `<leader>df`
 - Jump to the previous merge conflict marker: `]x`
 - Jump to the next merge conflict marker: `[x`
 - Choose the OURS version of the conflict: `<leader>co`
 - Choose the THEIRS version of the conflict: `<leader>ct`
-
-[comment]: # (TODO: Delete the following if I don't use it!)
 - Stage / unstage the selected entry: `-`
 - Next hunk: `<leader>j`
 - Previous hunk: `<leader>k`
@@ -96,11 +105,13 @@
 - Reset buffer: `<leader>hR`
 
 # nvim-surround (plugin)
+
 - Add surrounding delimiter pair: `ys<motion><char>`
 - Delete surrounding delimiter pair: `ds<char>`
 - Change surrounding delimiter pair: `cs<target><replacement>`
 
 # Etc
+
 - Jump to the previous cursor position: `<C-o>`
 - Jump to the next cursor position, if available: `<C-i>`
 - 1/2 page jumping (downwards): `<C-d>`
@@ -125,6 +136,7 @@
 - Run shell command: `:!<shell-command>`
 
 ## Mark
+
 - Mark a specific position (locally): `m<a-z>`
 - Jump to the beginning of a marked line (locally): `'<a-z>`
 - Jump to the exact position of a marked line (locally): `` `<a-z>``
@@ -135,6 +147,7 @@
 - Replace the character under the cursor: `r<char>`
 
 ## Register
+
 - Paste the last deleted, changed or yanked text from the unnamed register after the cursor: `p`
 - Paste the last deleted, changed or yanked text from the unnamed register before the cursor: `P`
 - Paste the last yanked text from the unnamed register after the cursor: `"0p`
