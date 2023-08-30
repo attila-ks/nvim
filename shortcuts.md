@@ -35,6 +35,7 @@
 # Leap (plugin)
 - Initiate forward search: `s`
 - Initiate backward search: `S`
+- Initiate search in other windows: `gs`
 
 # Multiple cursors (plugin)
 - Create cursors vertically: `<C-Down>` / `<C-Up>`
@@ -131,6 +132,8 @@
 
 - Search and replace (globally): `<leader>fg` -> `<target>` -> `C-q` -> `:cdo s/<target>/<replacement>/g`
 
+- Replace the character under the cursor: `r<char>`
+
 - Paste the last deleted, changed or yanked text from the unnamed register after the cursor: `p`
 - Paste the last deleted, changed or yanked text from the unnamed register before the cursor: `P`
 - Paste the last yanked text from the unnamed register after the cursor: `0p`
@@ -143,3 +146,4 @@
 - Paste changed or deleted (at least 1 line long) text from a numbered register (sorted by the most recent): `<1-9>p`
 - Save text to a named register: `"<a-z><change-or-delete-or-yank>`
 - Append text to a named register: `"<A-Z><change-or-delete-or-yank>`
+- Paste the text from the external clipboard: `"+p`
