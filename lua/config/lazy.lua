@@ -11,14 +11,4 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-require("lazy").setup({
-  spec = {
-    -- NOTE: Here is where you install your plugins.
-
-    -- TODO: Move this to its own file!
-    -- Multiple cursors plugin
-    "mg979/vim-visual-multi",
-
-    { import = "plugins" },
-  }
-})
+require("lazy").setup("plugins")
