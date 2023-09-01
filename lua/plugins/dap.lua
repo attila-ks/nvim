@@ -73,13 +73,14 @@ return {
         request = "launch",
         -- TODO: Ask for an executable path if the following does not exist!
         program = function()
-          local executablePath = "${workspaceFolder}/build/a.out"
-          local alternateExecutablePath = "${workspaceFolder}/a.out"
+          local current_work_dir = vim.fn.getcwd()
+          local executable_path1 = current_work_dir .. "/a.out"
+          local executable_path2 = current_work_dir .. "/build/a.out"
 
-          if vim.fn.filereadable(executablePath) == 1 then
-            return executablePath
+          if vim.fn.filereadable(executable_path1) == 1 then
+            return executable_path1
           else
-            return alternateExecutablePath
+            return executable_path2
           end
         end
       }
