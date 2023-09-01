@@ -1,5 +1,5 @@
--- Set <space> as the leader key
--- NOTE: Must happen before plugins are required (otherwise wrong leader will be used)
+-- Set <space> as the leader key.
+-- NOTE: Must happen before plugins are required (otherwise wrong leader will be used).
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
@@ -10,14 +10,14 @@ keymap.set("n", "<S-l>", ":bn<CR>")
 -- Switch to the previous buffer.
 keymap.set("n", "<S-h>", ":bp<CR>")
 
--- Move line up.
+-- Move line(s) up.
 keymap.set("v", "J", ":m '>+1<CR>gv=gv")
--- Move line down.
+-- Move line(s) down.
 keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
--- Keep the cursor in the middle during 1/2 page jumping (downwards)
+-- Keep the cursor in the middle during 1/2 page jumping (downwards).
 keymap.set("n", "<C-d>", "<C-d>zz")
--- Keep the cursor in the middle during 1/2 page jumping (upwards)
+-- Keep the cursor in the middle during 1/2 page jumping (upwards).
 keymap.set("n", "<C-u>", "<C-u>zz")
 
 -- Clear search highlight.

@@ -4,47 +4,46 @@ local opt = vim.opt
 vim.g.loaded_netrwPlugin = 1
 vim.g.loaded_netrw = 1
 
--- Make line numbers default
+-- Make line numbers default.
 vim.wo.number = true
 
--- Enable mouse mode
+-- Enable mouse mode.
 opt.mouse = "a"
 
 -- Sync clipboard between OS and Neovim.
 opt.clipboard = "unnamedplus"
 
--- Enable break indent
+-- Enable break indent.
 opt.breakindent = true
 
--- Save undo history
+-- Save undo history.
 opt.undofile = true
 
--- Case insensitive searching UNLESS /C or capital in search
+-- Case insensitive searching UNLESS /C or capital in search.
 opt.ignorecase = true
 opt.smartcase = true
 
--- Keep signcolumn on by default
+-- Keep signcolumn on by default.
 vim.wo.signcolumn = "yes"
 
--- Decrease update time
+-- Decrease update time.
 opt.updatetime = 250
 opt.timeout = true
 opt.timeoutlen = 300
 
--- Set completeopt to have a better completion experience
+-- Set completeopt to have a better completion experience.
 opt.completeopt = "menuone,noselect"
 
--- NOTE: You should make sure your terminal supports this
+-- NOTE: You should make sure your terminal supports this.
 opt.termguicolors = true
 
--- Split windows
+-- Split windows.
 opt.splitright = true
 opt.splitbelow = true
 
---[[ General indentation ]]
--- Makes sure spaces are used for indenting, even when `Tab` key pressed
+-- Makes sure spaces are used for indenting, even when `Tab` key pressed.
 opt.expandtab = true
--- The number of spaces used for indenting
+-- The number of spaces used for indenting.
 opt.tabstop = 2
 -- Number of spaces to use for each step of (auto)indent. Used for `>>`, `<<`, etc.
 opt.shiftwidth = 2

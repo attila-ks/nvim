@@ -4,13 +4,13 @@ return {
 
   -- NOTE: And you can specify dependencies as well
   dependencies = {
-    -- Creates a beautiful debugger UI
+    -- Creates a beautiful debugger UI.
     "rcarriga/nvim-dap-ui",
 
-    -- Installs the debug adapters for you
+    -- Installs the debug adapters for you.
     "jay-babu/mason-nvim-dap.nvim",
 
-    -- Add your own debuggers here
+    -- Add your own debuggers here.
     "vadimcn/vscode-lldb",
   },
 
@@ -21,13 +21,13 @@ return {
 
     require("mason-nvim-dap").setup {
       -- Makes a best effort to setup the various debuggers with
-      -- reasonable debug configurations
+      -- reasonable debug configurations.
       automatic_setup = true,
 
       -- You'll need to check that you have the required things installed
       -- online.
       ensure_installed = {
-        -- Update this to ensure that you have the debuggers for the langs you want
+        -- Update this to ensure that you have the debuggers for the langs you want.
         "lldb",
       },
     }
@@ -50,8 +50,7 @@ return {
       widgets.centered_float(widgets.scopes)
     end, { desc = "DAP: Open variables window" })
 
-    -- Dap UI setup
-    -- For more information, see |:help nvim-dap-ui|
+    -- Dap UI setup (for more information, see |:help nvim-dap-ui|).
     dapui.setup {
       icons = { expanded = "", collapsed = "", current_frame = "" }
     }

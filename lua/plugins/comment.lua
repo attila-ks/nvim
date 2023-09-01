@@ -1,5 +1,5 @@
 return {
-  -- Commenting plugin
+  -- Commenting plugin.
   "numToStr/Comment.nvim",
 
   config = function()

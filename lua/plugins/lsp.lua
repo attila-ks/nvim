@@ -1,11 +1,11 @@
 return {
-  -- LSP Configuration & Plugins
+  -- LSP Configuration & Plugins.
   "neovim/nvim-lspconfig",
   dependencies = {
-    -- Automatically install LSPs to stdpath for neovim
+    -- Automatically install LSPs to stdpath for neovim.
     "williamboman/mason.nvim",
     "williamboman/mason-lspconfig.nvim",
-    -- Autocompletion
+    -- Autocompletion.
     "hrsh7th/nvim-cmp",
     "hrsh7th/cmp-nvim-lsp",
     "L3MON4D3/LuaSnip",

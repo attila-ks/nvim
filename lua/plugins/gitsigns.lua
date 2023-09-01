@@ -1,5 +1,5 @@
 return {
-  -- Add git releated signs to the gutter, as well as utilities for managing changes
+  -- Add git releated signs to the gutter, as well as utilities for managing changes.
   "lewis6991/gitsigns.nvim",
 
   config = function()

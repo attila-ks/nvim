@@ -6,10 +6,10 @@ return {
   end,
 
   opts = {
-    -- Disable automatic installation of missing parsers when entering buffer
+    -- Disable automatic installation of missing parsers when entering buffer.
     auto_install = false,
-    highlight = {enable = true},
-    -- Add languages to be installed here that you want installed for treesitter
+    highlight = { enable = true },
+    -- Add languages to be installed here that you want installed for treesitter.
     ensure_installed = { "c", "cpp", "cmake", "lua", "vimdoc" }
   },
 

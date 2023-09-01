@@ -5,7 +5,6 @@ return {
     "nvim-lua/plenary.nvim"
   },
 
-  -- FIXME: Diffview is not configured based on its GitHub page: https://github.com/sindrets/diffview.nvim
   config = function()
     vim.fn.system("git rev-parse --is-inside-work-tree")
     if vim.v.shell_error == 0 then
