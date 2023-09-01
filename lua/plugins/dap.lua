@@ -1,8 +1,6 @@
 return {
-  -- NOTE: Yes, you can install new plugins here!
   "mfussenegger/nvim-dap",
 
-  -- NOTE: And you can specify dependencies as well
   dependencies = {
     -- Creates a beautiful debugger UI.
     "rcarriga/nvim-dap-ui",
@@ -33,7 +31,6 @@ return {
     }
 
     -- Basic debugging keymaps.
-    -- FIXME: Cannot use `Ctrl` and `Shift` keys (e.g., `<S-F5>`)!
     vim.keymap.set("n", "<F5>", dap.continue)
     vim.keymap.set("n", "<F1>", dap.step_over)
     vim.keymap.set("n", "<F2>", dap.step_into)
