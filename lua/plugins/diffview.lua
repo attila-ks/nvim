@@ -7,9 +7,9 @@ return {
 
   config = function()
     vim.fn.system("git rev-parse --is-inside-work-tree")
+
     if vim.v.shell_error == 0 then
       local keymap = vim.keymap
-
       require("diffview").setup {
         keymap.set("n", "<leader>do", "<cmd>DiffviewOpen<CR>", { desc = "Git: Open diffview" }),
         keymap.set("n", "<leader>dc", "<cmd>DiffviewClose<CR>", { desc = "Git: Close diffview" }),

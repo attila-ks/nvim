@@ -40,11 +40,15 @@ return {
     vim.keymap.set("n", "<F3>", dap.step_out)
     vim.keymap.set("n", "<F4>", dap.restart)
     vim.keymap.set("n", "<F6>", dap.terminate)
+
     vim.keymap.set("n", "<leader>b", dap.toggle_breakpoint, { desc = "DAP: Toggle breakpoint" })
+
     vim.keymap.set("n", "<leader>B", function()
       dap.set_breakpoint(vim.fn.input "Breakpoint condition: ")
     end, { desc = "DAP: Toggle conditional breakpoint" })
+
     vim.keymap.set("n", "<leader>cb", dap.clear_breakpoints, { desc = "DAP: Clear breakpoints" })
+
     -- FIXME: Cannot exit the floating window!
     vim.keymap.set("n", "<leader>os", function()
       widgets.centered_float(widgets.scopes)
@@ -64,6 +68,7 @@ return {
       command = "/usr/bin/lldb-vscode",
       name = "lldb"
     }
+
     dap.configurations.cpp = {
       {
         name = "DebugMe",

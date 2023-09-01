@@ -1,6 +1,7 @@
 return {
   -- LSP Configuration & Plugins.
   "neovim/nvim-lspconfig",
+
   dependencies = {
     -- Automatically install LSPs to stdpath for neovim.
     "williamboman/mason.nvim",
@@ -40,10 +41,7 @@ return {
     --  Add any additional override configuration in the following tables. They will be passed to
     --  the `settings` field of the server config.
     local servers = {
-      clangd = {
-        --[[ -- Switch between source/header (C/C++).
-        vim.keymap.set("n", "gsh", ":ClangdSwitchSourceHeader<CR>") ]]
-      },
+      clangd = {},
       cmake = {},
       lua_ls = {}
     }
@@ -83,14 +81,14 @@ return {
         end,
       },
       mapping = cmp.mapping.preset.insert {
-            ["<C-d>"] = cmp.mapping.scroll_docs(-4),
-            ["<C-f>"] = cmp.mapping.scroll_docs(4),
-            ["<C-Space>"] = cmp.mapping.complete {},
-            ["<CR>"] = cmp.mapping.confirm {
+        ["<C-d>"] = cmp.mapping.scroll_docs(-4),
+        ["<C-f>"] = cmp.mapping.scroll_docs(4),
+        ["<C-Space>"] = cmp.mapping.complete {},
+        ["<CR>"] = cmp.mapping.confirm {
           behavior = cmp.ConfirmBehavior.Replace,
           select = true,
         },
-            ["<Tab>"] = cmp.mapping(function(fallback)
+        ["<Tab>"] = cmp.mapping(function(fallback)
           if cmp.visible() then
             cmp.select_next_item()
           elseif luasnip.expand_or_jumpable() then
@@ -99,7 +97,7 @@ return {
             fallback()
           end
         end, { "i", "s" }),
-            ["<S-Tab>"] = cmp.mapping(function(fallback)
+        ["<S-Tab>"] = cmp.mapping(function(fallback)
           if cmp.visible() then
             cmp.select_prev_item()
           elseif luasnip.jumpable(-1) then
