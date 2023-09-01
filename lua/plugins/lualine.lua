@@ -8,6 +8,10 @@ return {
       component_separators = "|",
       section_separators = "",
       path = 2
+    },
+
+    sections = {
+      lualine_y = {}
     }
   }
 }
