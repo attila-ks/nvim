@@ -22,3 +22,12 @@ keymap.set("n", "<C-u>", "<C-u>zz")
 
 -- Clear search highlight.
 keymap.set("n", "<esc>", ":noh<CR>")
+
+keymap.set("n", "<leader>r",
+  function()
+    local vimfinity = require("vimfinity")
+    local executable_path = vimfinity.find_executable_path()
+    vim.cmd(":!" .. executable_path)
+  end,
+  { desc = "Run without debugging" }
+)

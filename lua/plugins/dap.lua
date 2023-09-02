@@ -73,15 +73,8 @@ return {
         request = "launch",
         -- TODO: Ask for an executable path if the following does not exist!
         program = function()
-          local current_work_dir = vim.fn.getcwd()
-          local executable_path1 = current_work_dir .. "/a.out"
-          local executable_path2 = current_work_dir .. "/build/a.out"
-
-          if vim.fn.filereadable(executable_path1) == 1 then
-            return executable_path1
-          else
-            return executable_path2
-          end
+          local vimfinity = require("vimfinity")
+          return vimfinity.find_executable_path()
         end
       }
     }
