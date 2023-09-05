@@ -7,6 +7,9 @@ vim.g.loaded_netrw = 1
 -- Make line numbers default.
 vim.wo.number = true
 
+-- Enable relative line numbers.
+vim.wo.relativenumber = true
+
 -- Enable mouse mode.
 opt.mouse = "a"
 
