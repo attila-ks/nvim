@@ -5,15 +5,11 @@ vim.g.maplocalleader = " "
 
 local keymap = vim.keymap
 
--- Switch to the next buffer.
-keymap.set("n", "<S-l>", ":bn<CR>")
--- Switch to the previous buffer.
-keymap.set("n", "<S-h>", ":bp<CR>")
+keymap.set("n", "<S-l>", ":bn<CR>", { desc = "Switch to the next buffer" })
+keymap.set("n", "<S-h>", ":bp<CR>", { desc = "Switch to the previous buffer" })
 
--- Move line(s) up.
-keymap.set("v", "J", ":m '>+1<CR>gv=gv")
--- Move line(s) down.
-keymap.set("v", "K", ":m '<-2<CR>gv=gv")
+keymap.set("v", "J", ":m '>+1<CR>gv=gv", { desc = "Move line(s) up" })
+keymap.set("v", "K", ":m '<-2<CR>gv=gv", { desc = "Move line(s) down" })
 
 -- Keep the cursor in the middle during 1/2 page jumping (downwards).
 keymap.set("n", "<C-d>", "<C-d>zz")

@@ -31,25 +31,26 @@ return {
     }
 
     -- Basic debugging keymaps.
-    vim.keymap.set("n", "<F5>", dap.continue)
-    vim.keymap.set("n", "<F1>", dap.step_over)
-    vim.keymap.set("n", "<F2>", dap.step_into)
-    vim.keymap.set("n", "<F3>", dap.step_out)
-    vim.keymap.set("n", "<F4>", dap.restart)
-    vim.keymap.set("n", "<F6>", dap.terminate)
+    vim.keymap.set("n", "<leader>dr", dap.restart, { desc = "Debug: Restart" })
+    vim.keymap.set("n", "<leader>ds", dap.continue, { desc = "Debug: Start/Continue" })
+    vim.keymap.set("n", "<leader>dn", dap.step_over, { desc = "Debug: Next" })
+    vim.keymap.set("n", "<leader>di", dap.step_into, { desc = "Debug: Step into" })
+    vim.keymap.set("n", "<leader>do", dap.step_out, { desc = "Debug: Step out" })
+    vim.keymap.set("n", "<leader>dt", dap.terminate, { desc = "Debug: Terminate" })
 
-    vim.keymap.set("n", "<leader>b", dap.toggle_breakpoint, { desc = "DAP: Toggle breakpoint" })
+    vim.keymap.set("n", "<leader>db", dap.toggle_breakpoint, { desc = "Debug: Toggle breakpoint" })
 
-    vim.keymap.set("n", "<leader>B", function()
+    vim.keymap.set("n", "<leader>dB", function()
       dap.set_breakpoint(vim.fn.input "Breakpoint condition: ")
-    end, { desc = "DAP: Toggle conditional breakpoint" })
+    end, { desc = "Debug: Toggle conditional breakpoint" })
 
-    vim.keymap.set("n", "<leader>cb", dap.clear_breakpoints, { desc = "DAP: Clear breakpoints" })
+    vim.keymap.set("n", "<leader>dcb", dap.clear_breakpoints, { desc = "Debug: Clear breakpoints" })
 
     -- FIXME: Cannot exit the floating window!
-    vim.keymap.set("n", "<leader>os", function()
+    -- TODO: Consider to toggle the window with the same keymap.
+    vim.keymap.set("n", "<leader>dv", function()
       widgets.centered_float(widgets.scopes)
-    end, { desc = "DAP: Open variables window" })
+    end, { desc = "Debug: Open variables window" })
 
     -- Dap UI setup (for more information, see |:help nvim-dap-ui|).
     dapui.setup {
