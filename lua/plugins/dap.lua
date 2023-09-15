@@ -44,7 +44,7 @@ return {
       dap.set_breakpoint(vim.fn.input "Breakpoint condition: ")
     end, { desc = "Debug: Toggle conditional breakpoint" })
 
-    vim.keymap.set("n", "<leader>dcb", dap.clear_breakpoints, { desc = "Debug: Clear breakpoints" })
+    vim.keymap.set("n", "<leader>dc", dap.clear_breakpoints, { desc = "Debug: Clear breakpoints" })
 
     -- FIXME: Cannot exit the floating window!
     -- TODO: Consider to toggle the window with the same keymap.

@@ -11,10 +11,19 @@ return {
     if vim.v.shell_error == 0 then
       local keymap = vim.keymap
       require("diffview").setup {
-        keymap.set("n", "<leader>do", "<cmd>DiffviewOpen<CR>", { desc = "Git: Open diffview" }),
-        keymap.set("n", "<leader>dc", "<cmd>DiffviewClose<CR>", { desc = "Git: Close diffview" }),
-        keymap.set("n", "<leader>dt", "<cmd>DiffviewToggleFiles<CR>", { desc = "Git: Toggle file panel" }),
-        keymap.set("n", "<leader>df", "<cmd>DiffviewFocusFiles<CR>", { desc = "Git: Focus on the file panel" })
+        -- TODO: Consider to toggle the window with the same keymap, so `<leader>gc` can be removed.
+        keymap.set("n", "<leader>gd", function()
+          if not Diffview_open then
+            vim.cmd(":DiffviewOpen")
+            Diffview_open = true
+          else
+            vim.cmd(":DiffviewClose")
+            Diffview_open = false
+          end
+        end, { desc = "Git: Toggle diffview" }),
+
+        keymap.set("n", "<leader>gf", "<cmd>DiffviewToggleFiles<CR>", { desc = "Git: Toggle file panel" }),
+        keymap.set("n", "<leader>gff", "<cmd>DiffviewFocusFiles<CR>", { desc = "Git: Focus on the file panel" })
       }
     end
   end
