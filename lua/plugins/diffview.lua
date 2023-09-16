@@ -11,7 +11,6 @@ return {
     if vim.v.shell_error == 0 then
       local keymap = vim.keymap
       require("diffview").setup {
-        -- TODO: Consider to toggle the window with the same keymap, so `<leader>gc` can be removed.
         keymap.set("n", "<leader>gd", function()
           if not Diffview_open then
             vim.cmd(":DiffviewOpen")

@@ -27,7 +27,7 @@ return {
       end
 
       -- Mappings.
-      -- See `:help vim.lsp.*` for documentation on any of the below functions
+      -- See `:help vim.lsp.*` for documentation on any of the below functions.
       nmap("gD", vim.lsp.buf.declaration, "Goto declaration")
       nmap("gd", vim.lsp.buf.definition, "Goto definition")
       nmap("K", vim.lsp.buf.hover, "Hover documentation")
