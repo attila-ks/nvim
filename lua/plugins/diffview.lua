@@ -22,8 +22,8 @@ return {
           end
         end, { desc = "Git: Toggle diffview" }),
 
-        keymap.set("n", "<leader>gf", "<cmd>DiffviewToggleFiles<CR>", { desc = "Git: Toggle file panel" }),
-        keymap.set("n", "<leader>gff", "<cmd>DiffviewFocusFiles<CR>", { desc = "Git: Focus on the file panel" })
+        keymap.set("n", "<leader>gt", "<cmd>DiffviewToggleFiles<CR>", { desc = "Git: Toggle file panel" }),
+        keymap.set("n", "<leader>gf", "<cmd>DiffviewFocusFiles<CR>", { desc = "Git: Focus on the file panel" })
       }
     end
   end
