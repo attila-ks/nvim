@@ -54,3 +54,6 @@ opt.autoindent = true
 
 -- Blinking cursor.
 opt.guicursor = "a:blinkon100"
+
+-- Hide the cmdline.
+opt.cmdheight = 0
