@@ -7,7 +7,14 @@ return {
       icons_enabled = true,
       component_separators = "|",
       section_separators = "",
-      path = 2
+      path = 2,
+      ignore_focus = {
+        "dapui_scopes",
+        "dapui_watches",
+        "dapui_stacks",
+        "dap-repl",
+        "dapui_console"
+      }
     },
 
     sections = {
