@@ -54,7 +54,24 @@ return {
 
     -- Dap UI setup (for more information, see |:help nvim-dap-ui|).
     dapui.setup {
-      icons = { expanded = "", collapsed = "", current_frame = "" }
+      icons = { expanded = "", collapsed = "", current_frame = "" },
+
+      layouts = { {
+        elements = {
+          { id = "scopes",  size = 0.37 },
+          { id = "watches", size = 0.26 },
+          { id = "stacks",  size = 0.37 }
+        },
+        position = "left",
+        size = 40
+      }, {
+        elements = {
+          { id = "repl",    size = 0.5 },
+          { id = "console", size = 0.5 }
+        },
+        position = "bottom",
+        size = 10
+      } },
     }
 
     dap.listeners.after.event_initialized["dapui_config"] = dapui.open
