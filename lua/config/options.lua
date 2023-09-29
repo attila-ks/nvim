@@ -29,6 +29,9 @@ opt.smartcase = true
 -- Keep signcolumn on by default.
 vim.wo.signcolumn = "yes"
 
+-- Hide the `~` characters from buffers.
+opt.fillchars:append { eob = " " }
+
 -- Decrease update time.
 opt.updatetime = 250
 opt.timeout = true
