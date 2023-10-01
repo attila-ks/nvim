@@ -13,6 +13,10 @@ return {
     "saadparwaiz1/cmp_luasnip"
   },
 
+  vim.diagnostic.config({
+    signs = false
+  }),
+
   config = function()
     -- This function gets run when an LSP connects to a particular buffer.
     local on_attach = function(client, bufnr)
