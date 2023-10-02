@@ -1,9 +1,8 @@
 return {
-  -- LSP Configuration & Plugins.
   "neovim/nvim-lspconfig",
 
   dependencies = {
-    -- Automatically install LSPs to stdpath for neovim.
+    -- Automatically installs LSPs to stdpath for neovim.
     "williamboman/mason.nvim",
     "williamboman/mason-lspconfig.nvim",
     -- Autocompletion.
@@ -13,6 +12,7 @@ return {
     "saadparwaiz1/cmp_luasnip"
   },
 
+  -- Hides the LSP diagnostic gutter.
   vim.diagnostic.config({
     signs = false
   }),
@@ -20,47 +20,32 @@ return {
   config = function()
     -- This function gets run when an LSP connects to a particular buffer.
     local on_attach = function(client, bufnr)
-      -- We create a function that lets us more easily define mappings specific
-      -- for LSP related items. It sets the mode, buffer and description for us each time.
-      local nmap = function(keys, func, desc)
-        if desc then
-          desc = "LSP: " .. desc
-        end
-
-        vim.keymap.set("n", keys, func, { buffer = bufnr, desc = desc })
-      end
-
-      -- Mappings.
-      -- See `:help vim.lsp.*` for documentation on any of the below functions.
-      nmap("gD", vim.lsp.buf.declaration, "Goto declaration")
-      nmap("gd", vim.lsp.buf.definition, "Goto definition")
-      nmap("K", vim.lsp.buf.hover, "Hover documentation")
-      nmap("<leader>rn", vim.lsp.buf.rename, "Rename")
-      nmap("gr", require("telescope.builtin").lsp_references, "Goto references")
-      nmap("<leader>p", function() vim.lsp.buf.format { async = true } end, "Format buffer")
+      -- Buffer local mappings.
+      -- See `:help vim.lsp.*` for documentation on any of the below functions
+      vim.keymap.set("n", "gD", vim.lsp.buf.declaration, { buffer = bufnr, desc = "Goto declaration" })
+      vim.keymap.set("n", "gd", vim.lsp.buf.definition, { buffer = bufnr, desc = "Goto definition" })
+      vim.keymap.set("n", "K", vim.lsp.buf.hover, { buffer = bufnr, desc = "Hover documentation" })
+      vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, { buffer = bufnr, desc = "Rename" })
+      vim.keymap.set("n", "gr", vim.lsp.buf.references, { buffer = bufnr, desc = "Goto references" })
+      vim.keymap.set("n", "<leader>p", function()
+        vim.lsp.buf.format { async = true }
+      end, { buffer = bufnr, desc = "Format" })
     end
 
-    -- Enable the following language servers. They will automatically be installed.
-    --  Add any additional override configuration in the following tables. They will be passed to
-    --  the `settings` field of the server config.
     local servers = {
       clangd = {},
       cmake = {},
       lua_ls = {}
     }
 
-    -- nvim-cmp supports additional completion capabilities, so broadcast that to servers
+    -- nvim-cmp supports additional completion capabilities, so broadcast that to servers.
     local capabilities = vim.lsp.protocol.make_client_capabilities()
     capabilities = require("cmp_nvim_lsp").default_capabilities(capabilities)
 
     require("mason").setup()
 
-    -- Ensure the servers above are installed
     local mason_lspconfig = require("mason-lspconfig")
-    mason_lspconfig.setup {
-      ensure_installed = vim.tbl_keys(servers),
-    }
-
+    mason_lspconfig.setup()
     mason_lspconfig.setup_handlers {
       function(server_name)
         require("lspconfig")[server_name].setup {
@@ -68,7 +53,7 @@ return {
           on_attach = on_attach,
           settings = servers[server_name],
         }
-      end,
+      end
     }
 
     -- nvim-cmp setup
