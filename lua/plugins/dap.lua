@@ -7,9 +7,6 @@ return {
 
     -- Installs the debug adapters for you.
     "jay-babu/mason-nvim-dap.nvim",
-
-    -- Add your own debuggers here.
-    "vadimcn/vscode-lldb",
   },
 
   config = function()
@@ -26,7 +23,7 @@ return {
       -- online.
       ensure_installed = {
         -- Update this to ensure that you have the debuggers for the langs you want.
-        "lldb",
+        "codelldb"
       },
     }
 
@@ -78,16 +75,23 @@ return {
     dap.listeners.before.event_terminated["dapui_config"] = dapui.close
     dap.listeners.before.event_exited["dapui_config"] = dapui.close
 
-    dap.adapters.lldb = {
-      type = "executable",
-      command = "/usr/bin/lldb-vscode",
-      name = "lldb"
+    dap.adapters.codelldb = {
+      type = "server",
+      port = "${port}",
+      executable = {
+        -- Change This to your path!
+        command = "codelldb",
+        args = { "--port", "${port}" },
+
+        -- On windows you may have to uncomment this:
+        -- detached = false
+      }
     }
 
     dap.configurations.cpp = {
       {
         name = "DebugMe",
-        type = "lldb",
+        type = "codelldb",
         request = "launch",
         -- TODO: Ask for an executable path if the following does not exist!
         program = function()
