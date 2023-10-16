@@ -13,7 +13,8 @@ return {
         "dapui_watches",
         "dapui_stacks",
         "dap-repl",
-        "dapui_console"
+        "dapui_console",
+        "DiffviewFiles"
       }
     },
 
