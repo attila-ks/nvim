@@ -63,12 +63,16 @@ return {
         size = 40
       }, {
         elements = {
-          { id = "repl",    size = 0.5 },
-          { id = "console", size = 0.5 }
+          { id = "console", size = 1.0 }
         },
         position = "bottom",
         size = 10
       } },
+
+      controls = {
+        element = "console",
+        enabled = true
+      }
     }
 
     dap.listeners.after.event_initialized["dapui_config"] = dapui.open
@@ -90,7 +94,7 @@ return {
 
     dap.configurations.cpp = {
       {
-        name = "DebugMe",
+        name = "Output",
         type = "codelldb",
         request = "launch",
         -- TODO: Ask for an executable path if the following does not exist!
