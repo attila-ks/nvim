@@ -49,6 +49,14 @@ return {
       widgets.centered_float(widgets.scopes)
     end, { desc = "Debug: Open variables window" })
 
+    vim.api.nvim_set_hl(0, "DapBreakpoint", { ctermbg = 0, fg = "#fc5d7c" })
+    vim.api.nvim_set_hl(0, "DapStopped", { ctermbg = 0, fg = "#9ed072" })
+
+    vim.fn.sign_define("DapBreakpoint", { text = "", texthl = "DapBreakpoint" })
+    vim.fn.sign_define("DapBreakpointCondition", { text = "ﳁ", texthl = "DapBreakpoint" })
+    vim.fn.sign_define("DapBreakpointRejected", { text = "", texthl = "DapBreakpoint" })
+    vim.fn.sign_define("DapStopped", { text = "", texthl = "DapStopped", linehl = "DapStopped" })
+
     -- Dap UI setup (for more information, see |:help nvim-dap-ui|).
     dapui.setup {
       icons = { expanded = "", collapsed = "", current_frame = "" },
