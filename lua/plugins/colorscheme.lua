@@ -1,9 +1,9 @@
 return {
-  "sainnhe/sonokai",
-
-  priority = 1000,
-
-  config = function()
-    vim.cmd.colorscheme "sonokai"
-  end
+  -- Configure LazyVim to load catppuccin
+  {
+    "LazyVim/LazyVim",
+    opts = {
+      colorscheme = "catppuccin",
+    },
+  },
 }
