@@ -7,6 +7,8 @@ return {
       "clang-format",
       "clangd",
       "mesonlsp",
+      "shellcheck",
+      "bash-language-server",
     },
   },
 }
