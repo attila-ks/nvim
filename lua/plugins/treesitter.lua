@@ -6,6 +6,7 @@ return {
       "meson",
       "bash",
       "lua",
+      "robot",
     },
   },
 }
