@@ -7,6 +7,7 @@ return {
       "mesonlsp",
       "shellcheck",
       "bash-language-server",
+      "robotframework-lsp"
     },
   },
 }
