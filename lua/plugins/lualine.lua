@@ -3,7 +3,10 @@ return {
 
   opts = {
     sections = {
-      lualine_z = {},
+      lualine_z = {
+        { "encoding", separator = "" },
+        "fileformat"
+      },
     },
   },
 }
